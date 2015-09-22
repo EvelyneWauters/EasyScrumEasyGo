@@ -32,6 +32,10 @@ public class EventController {
         return products;
     }
 
+    public List<Product> getProductsByEvent(int eventId)    {
+        return verkoopEJB.getListOfProductsByEventId(eventId);
+    }
+
     public void addQuantity(Product product){
         Verkoop verkoop = verkoopEJB.getAlleVerkoop().stream().filter(v -> v.getProduct().getId() == product.getId()).findFirst().get();
         verkoopEJB.addPintjeAanHoeveelheid(verkoop.getId());

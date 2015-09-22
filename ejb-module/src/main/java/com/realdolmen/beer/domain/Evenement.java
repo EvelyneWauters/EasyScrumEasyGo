@@ -13,7 +13,7 @@ public class Evenement {
 
     private String name;
 
-    @ManyToMany
+    @ManyToMany (fetch=FetchType.EAGER)
     private List<Verkoop> verkoopList;
 
     public int getId() {
