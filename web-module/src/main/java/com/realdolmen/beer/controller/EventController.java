@@ -6,7 +6,6 @@ import com.realdolmen.beer.domain.Verkoop;
 import com.realdolmen.beer.persistence.VerkoopEJB;
 
 import javax.ejb.EJB;
-import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -20,6 +19,8 @@ public class EventController implements Serializable {
     @EJB
     private VerkoopEJB verkoopEJB ;
     private Evenement evenement;
+
+    private List<Verkoop> sales;
 
 
     public List<Evenement> getEvents() {
@@ -38,20 +39,15 @@ public class EventController implements Serializable {
         return verkoopEJB.getListOfProductsByEventId(eventId);
     }
 
-    public void addQuantityKleinPintje(Product product){
-        Verkoop verkoop = verkoopEJB.getAlleVerkoop().stream().filter(v -> v.getProduct().getId() == product.getId()).findFirst().get();
+    public void addQuantityKleinPintje(Verkoop verkoop){
         verkoopEJB.addPintjeAanHoeveelheid(verkoop.getId());
     }
 
-    public void addQuantityGrootPintje(Product product){
-        Verkoop verkoop = verkoopEJB.getAlleVerkoop().stream().filter(v -> v.getProduct().getId() == product.getId()).findFirst().get();
-        System.out.println(verkoop.getId());
+    public void addQuantityGrootPintje(Verkoop verkoop){
         verkoopEJB.addGrootPintjeAanHoeveelheid(verkoop.getId());
     }
 
-    public void addQuantityVat(Product product){
-        Verkoop verkoop = verkoopEJB.getAlleVerkoop().stream().filter(v -> v.getProduct().getId() == product.getId()).findFirst().get();
-        System.out.println(verkoop.getId());
+    public void addQuantityVat(Verkoop verkoop){
         verkoopEJB.addVatAanHoeveelheid(verkoop.getId());
     }
 
@@ -73,5 +69,14 @@ public class EventController implements Serializable {
 
     public Evenement getEvenement() {
         return evenement;
+    }
+
+    public List<Verkoop> getSales() {
+        sales = this.evenement.getVerkoopList();
+        return sales;
+    }
+
+    public void setSales(List<Verkoop> sales) {
+        this.sales = sales;
     }
 }
