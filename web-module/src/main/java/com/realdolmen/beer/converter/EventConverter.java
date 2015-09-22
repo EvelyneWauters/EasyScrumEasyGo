@@ -23,11 +23,14 @@ public class EventConverter implements Converter {
             return null;
 
         int id = Integer.parseInt(value);
-        return verkoopEJB.findEventById(id);
+        return verkoopEJB.findEventByID(id);
     }
 
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
+        if(value == null)
+            return null;
+
         Evenement evenement = (Evenement)value;
         return String.valueOf(evenement.getId());
     }

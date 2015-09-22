@@ -40,7 +40,7 @@ public class VerkoopEJB {
 
     public void addPintjeAanHoeveelheid(int verkoopId) {
         Verkoop verkoop = em.find(Verkoop.class, verkoopId);
-        verkoop.setAantal(verkoop.getAantal() + 0.25);
+        verkoop.setAantal(verkoop.getAantal() + 1);
         em.persist(verkoop);
     }
 
