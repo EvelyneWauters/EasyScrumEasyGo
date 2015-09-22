@@ -3,4 +3,23 @@
     <user id="1" name="EasyScrum"/>
     <user id="2" name="EasyGo"/>
 
+
+    <evenement id="1" name="Rock Werchter"/>
+    <evenement id="2" name="Tomorrowland"/>
+    <evenement id="3" name="Scoutsfuif 22/09"/>
+
+    <product id="1" name="Stella" inhoud="0.25"/>
+    <product id="2" name="Jupiler" inhoud="0.33"/>
+    <product id="3" name="Leffe Blond" inhoud="0.33"/>
+
+    <verkoop id="1" aantal="8" product_id="1"/>
+    <verkoop id="2" aantal="10" product_id="2"/>
+    <verkoop id="3" aantal="2" product_id="3"/>
+
+    <evenement_verkoop Evenement_id="1" verkoopList_id="1"/>
+    <evenement_verkoop Evenement_id="1" verkoopList_id="2"/>
+    <evenement_verkoop Evenement_id="1" verkoopList_id="3"/>
+    <evenement_verkoop Evenement_id="2" verkoopList_id="1"/>
+    <evenement_verkoop Evenement_id="2" verkoopList_id="2"/>
+    <evenement_verkoop Evenement_id="3" verkoopList_id="2"/>
 </dataset>
