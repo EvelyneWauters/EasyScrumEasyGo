@@ -21,14 +21,14 @@ public class EventController {
 
 
     public List<Evenement> getEvents() {
-        //findallevents
-        //return verkoopEJB
-        return new ArrayList<>();
+        return verkoopEJB.getAllEvents();
     }
 
-    public List<Product> getProducts() {
+    public List<Product> getProducts(Evenement evenement) {
         List<Product> products = new ArrayList<>();
-        verkoopEJB.getAlleVerkoop().forEach((item) -> products.add(item.getProduct()));
+        verkoopEJB.getAlleVerkoop().forEach((item) -> {
+            products.add(item.getProduct());
+        });
         return products;
     }
 
@@ -54,5 +54,9 @@ public class EventController {
 
     public Evenement getEvenement() {
         return evenement;
+    }
+
+    public String getProducts() {
+        return null;
     }
 }
