@@ -8,19 +8,15 @@
     <title></title>
 </h:head>
 <h:body>
-    <h1>Evenement</h1>
-    <p:dataTable value="#{eventController.products}" var="product">
+    <h1>Evenementen</h1>
+    <p:dataTable value="#{eventController.events}" var="event">
         <p:column headerText="Naam">
-            <h:outputText value="#{product.name}" />
+            <h:outputText value="#{event}" />
         </p:column>
-
-        <p:column headerText="Totaal (in l)">
-            <h:outputText value="#{eventController.getQuantity(product)}" />
-        </p:column>
-
-        <p:column>
-            <p:commandButton value="Pint" action="#{eventController.addQuantity(product)}" />
+        <p:column headerText="Overview">
+            <h:link value="#{event.name}" outcome="/event?id=#{event.id}" />
         </p:column>
     </p:dataTable>
 </h:body>
 </html>
+

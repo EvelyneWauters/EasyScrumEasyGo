@@ -18,7 +18,7 @@ public class Verkoop {
         return id;
     }
 
-    public Verkoop() {
+    protected Verkoop() {
     }
 
     public Verkoop(Product product, int aantal) {
