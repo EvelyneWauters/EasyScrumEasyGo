@@ -19,7 +19,7 @@ import java.util.List;
 public class VerkoopEJB {
 
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
 
     public void addQuantity(int hoeveelheid, Verkoop verkoop) {
         verkoop.setAantal(verkoop.getAantal() + hoeveelheid);
@@ -44,7 +44,7 @@ public class VerkoopEJB {
     public void addPintjeAanHoeveelheid(int verkoopId) {
         Verkoop verkoop = em.find(Verkoop.class, verkoopId);
         verkoop.setAantal(verkoop.getAantal() + 1);
-        em.persist(verkoop);
+        //em.persist(verkoop);
     }
 
     public Evenement findEventByID(int id) {
