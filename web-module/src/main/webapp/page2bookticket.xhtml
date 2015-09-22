@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+        >
+<h:head>
+
+    <title>Book a new Ticket</title>
+</h:head>
+
+<h:body style="padding:2rem;">
+    <div class="container">
+
+        <h1>Book your ticket</h1>
+
+
+        <p:selectOneMenu value="#{ticketController.ticket}">
+            <f:selectItems value="#{ticketController.retrieveAllTickets()}" var="ticket"
+                           itemLabel="#{ticket.flight.origin} - #{ticket.flight.destination} -- #{ticket.price}"/>
+        </p:selectOneMenu>
+
+
+        <br/><br/>
+        <h:form style="margin: auto">
+            <p:commandButton value="choose a ticket"
+                             action="#{registerPassengerAndBookTicketCdi.addTicketForThisPassenger(passengerController.passenger.id)}"/>
+        </h:form>
+    </div>
+
+</h:body>
+</html>

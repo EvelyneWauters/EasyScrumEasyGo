@@ -1,0 +1,21 @@
+<dataset>
+    <book id="1000" author="George Orwell" title="Nineteen Eighty Four" genre="fiction"/>
+    <book id="2000" author="Aldous Huxley" title="Brave New World" genre="fiction"/>
+    <book id="3000" author="Bram Stoker" title="Dracula" genre="fiction"/>
+
+
+    <passenger id="500" firstName="Lars" lastName="De Pauw" ssn="1398723" frequentFlyerMiles="30" passengerType="OCCASIONAL"/>
+    <passenger id="600" firstName="Hubert" lastName="Bullen" ssn="12987249" frequentFlyerMiles="50" passengerType="REGULAR"/>
+    <passenger id="700" firstName="Jonas" lastName="Meulemans" ssn="544153541" frequentFlyerMiles="80" passengerType="REGULAR"/>
+
+    <flight id="1" origin="Brussels" destination="Dublin"/>
+    <flight id="2" origin="Brussels" destination="Hawaii"/>
+
+    <ticket id="1" price="789" flight_id="1"/>
+    <ticket id="2" price="300" flight_id="1"/>
+    <ticket id="3" price="20" flight_id="2"/>
+
+    <passenger_ticket Passenger_id="500" ticketList_id="1"/>
+    <passenger_ticket Passenger_id="600" ticketList_id="2"/>
+
+</dataset>

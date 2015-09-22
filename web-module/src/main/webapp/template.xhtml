@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:rd="http://java.sun.com/jsf/composite/mytaglibrary"
+        >
+<h:head>
+    <title><ui:insert name="pageTitle"/> </title>
+</h:head>
+
+<h:body>
+
+    <h1><ui:insert name="pageHeader">
+        oops, something went wrong
+    </ui:insert></h1>
+
+    <p><ui:insert name="featuredFlight">
+        here is a featured flight
+    </ui:insert>
+    </p>
+
+    <ui:insert name="allTicketsTable">
+        all tickets table
+    </ui:insert>
+
+    <h2>And once more with composite components </h2>
+
+    <!--<rd:ticketTable tickets="#{ticketController.retrieveAllTickets}"/>-->
+
+</h:body>
+</html>
