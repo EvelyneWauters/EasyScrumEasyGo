@@ -33,7 +33,8 @@ public class EventController {
     }
 
     public void addQuantity(Product product){
-        verkoopEJB.addQuantity(1,new Verkoop(product,1));
+        Verkoop verkoop = verkoopEJB.getAlleVerkoop().stream().filter(v -> v.getProduct().getId() == product.getId()).findFirst().get();
+        verkoopEJB.addPintjeAanHoeveelheid(verkoop.getId());
     }
 
     public double getQuantity(Product product) {
