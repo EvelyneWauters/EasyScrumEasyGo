@@ -3,13 +3,15 @@ package com.realdolmen.beer.persistence;
 import com.realdolmen.beer.domain.Evenement;
 import com.realdolmen.beer.domain.Verkoop;
 
+import javax.ejb.Stateless;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-/**
- * Created by MDNAX30 on 22/09/2015.
- */
+@Named
+@RequestScoped
 public class VerkoopEJB {
 
     @PersistenceContext
