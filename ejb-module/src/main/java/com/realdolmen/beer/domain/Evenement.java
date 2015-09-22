@@ -38,4 +38,8 @@ public class Evenement {
     public void setVerkoopList(List<Verkoop> verkoopList) {
         this.verkoopList = verkoopList;
     }
+
+    public String getName() {
+        return name;
+    }
 }
