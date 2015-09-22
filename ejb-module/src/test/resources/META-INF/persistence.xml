@@ -47,7 +47,7 @@
 
         <class>com.realdolmen.beer.domain.Evenement</class>
         <class>com.realdolmen.beer.domain.Product</class>
-        <class>com.realdolmen.beer.domain.ProductOrder</class>
+        <class>com.realdolmen.beer.domain.Verkoop</class>
         <class>com.realdolmen.beer.domain.User</class>
 
 
