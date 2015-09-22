@@ -2,11 +2,13 @@ package com.realdolmen.beer;
 
 import com.realdolmen.beer.domain.Product;
 import com.realdolmen.beer.domain.Verkoop;
+import com.realdolmen.beer.persistence.VerkoopEJB;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import javax.inject.Inject;
 import javax.persistence.PersistenceException;
 
 /**

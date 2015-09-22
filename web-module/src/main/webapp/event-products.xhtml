@@ -12,7 +12,7 @@
 </h:head>
 <h:body>
     <h1>Evenement: #{eventController.evenement.name}</h1>
-    <p:dataTable value="#{eventController.getProductsByEvent(eventController.evenement.id)}" var="product">
+    <p:dataTable id="eventTable" value="#{eventController.getProductsByEvent(eventController.evenement.id)}" var="product">
         <p:column headerText="Naam">
             <h:outputText value="#{product.name}" />
         </p:column>
@@ -22,7 +22,9 @@
         </p:column>
 
         <p:column>
-            <h:form><p:commandButton value="Pint" action="#{eventController.addQuantity(product)}" /></h:form>
+            <h:form>
+                <p:commandButton value="Pint" action="#{eventController.addQuantity(product)}" update="eventTable" />
+            </h:form>
         </p:column>
     </p:dataTable>
 </h:body>
