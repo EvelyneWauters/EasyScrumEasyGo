@@ -42,8 +42,6 @@ public class VerkoopEJB {
 
     public void addPintjeAanHoeveelheid(int verkoopId) {
         Verkoop verkoop = em.find(Verkoop.class, verkoopId);
-        System.out.println("in hoeveelheid");
-        System.out.println(verkoop.getProduct().getName());
         verkoop.setAantal(verkoop.getAantal() + 0.25);
         em.merge(verkoop);
     }

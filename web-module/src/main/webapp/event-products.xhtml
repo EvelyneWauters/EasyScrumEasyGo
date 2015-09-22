@@ -12,7 +12,7 @@
 </h:head>
 <h:body>
     <h1>Evenement: #{eventController.evenement.name}</h1>
-    <p:dataTable id="eventTable" value="#{eventController.getProductsByEvent(eventController.evenement.id)}" var="product">
+    <p:dataTable id="eventTable" value="#{eventController.getSalesByEvent(eventController.evenement.id)}" var="product">
         <p:column headerText="Naam">
             <h:outputText value="#{product.name}" />
         </p:column>

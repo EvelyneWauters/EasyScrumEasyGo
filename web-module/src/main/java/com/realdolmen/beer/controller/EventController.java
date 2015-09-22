@@ -40,7 +40,6 @@ public class EventController implements Serializable {
 
     public void addQuantity(Product product){
         Verkoop verkoop = verkoopEJB.getAlleVerkoop().stream().filter(v -> v.getProduct().getId() == product.getId()).findFirst().get();
-        System.out.println(verkoop.getId());
         verkoopEJB.addPintjeAanHoeveelheid(verkoop.getId());
     }
 
