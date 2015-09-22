@@ -7,14 +7,15 @@ import com.realdolmen.beer.persistence.VerkoopEJB;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Named
-@RequestScoped
-public class EventController {
+@SessionScoped
+public class EventController implements Serializable {
 
     @EJB
     private VerkoopEJB verkoopEJB ;
@@ -31,6 +32,10 @@ public class EventController {
             products.add(item.getProduct());
         });
         return products;
+    }
+
+    public List<Product> getProductsByEvent(int eventId)    {
+        return verkoopEJB.getListOfProductsByEventId(eventId);
     }
 
     public void addQuantity(Product product){
