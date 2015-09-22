@@ -15,11 +15,14 @@
     <verkoop id="1" aantal="8" product_id="1"/>
     <verkoop id="2" aantal="10" product_id="2"/>
     <verkoop id="3" aantal="2" product_id="3"/>
+    <verkoop id="4" aantal="0" product_id="1"/>
+    <verkoop id="5" aantal="0" product_id="2"/>
+    <verkoop id="6" aantal="0" product_id="2"/>
 
     <evenement_verkoop Evenement_id="1" verkoopList_id="1"/>
     <evenement_verkoop Evenement_id="1" verkoopList_id="2"/>
     <evenement_verkoop Evenement_id="1" verkoopList_id="3"/>
-    <evenement_verkoop Evenement_id="2" verkoopList_id="1"/>
-    <evenement_verkoop Evenement_id="2" verkoopList_id="2"/>
-    <evenement_verkoop Evenement_id="3" verkoopList_id="2"/>
+    <evenement_verkoop Evenement_id="2" verkoopList_id="4"/>
+    <evenement_verkoop Evenement_id="2" verkoopList_id="5"/>
+    <evenement_verkoop Evenement_id="3" verkoopList_id="6"/>
 </dataset>
