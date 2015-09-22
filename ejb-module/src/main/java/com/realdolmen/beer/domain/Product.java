@@ -1,9 +1,6 @@
 package com.realdolmen.beer.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Product {
@@ -16,6 +13,9 @@ public class Product {
 
     // in liters
     private double inhoud;
+
+    @Lob
+    private String imageUrl;
 
 
 
@@ -38,6 +38,14 @@ public class Product {
 
     public void setInhoud(double inhoud) {
         this.inhoud = inhoud;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public Product() {
