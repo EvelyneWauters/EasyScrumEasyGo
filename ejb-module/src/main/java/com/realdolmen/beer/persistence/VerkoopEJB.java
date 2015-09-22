@@ -14,8 +14,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-@Named
-@RequestScoped
+@Stateless
 public class VerkoopEJB {
 
     @PersistenceContext
@@ -43,8 +42,10 @@ public class VerkoopEJB {
 
     public void addPintjeAanHoeveelheid(int verkoopId) {
         Verkoop verkoop = em.find(Verkoop.class, verkoopId);
+        System.out.println("in hoeveelheid");
+        System.out.println(verkoop.getProduct().getName());
         verkoop.setAantal(verkoop.getAantal() + 1);
-        em.persist(verkoop);
+        em.merge(verkoop);
     }
 
     public Evenement findEventByID(int id) {

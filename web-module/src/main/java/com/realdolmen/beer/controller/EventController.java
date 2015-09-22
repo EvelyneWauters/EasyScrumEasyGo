@@ -5,6 +5,7 @@ import com.realdolmen.beer.domain.Product;
 import com.realdolmen.beer.domain.Verkoop;
 import com.realdolmen.beer.persistence.VerkoopEJB;
 
+import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -15,7 +16,7 @@ import java.util.List;
 @RequestScoped
 public class EventController {
 
-    @Inject
+    @EJB
     private VerkoopEJB verkoopEJB ;
     private Evenement evenement;
 
@@ -34,6 +35,7 @@ public class EventController {
 
     public void addQuantity(Product product){
         Verkoop verkoop = verkoopEJB.getAlleVerkoop().stream().filter(v -> v.getProduct().getId() == product.getId()).findFirst().get();
+        System.out.println(verkoop.getId());
         verkoopEJB.addPintjeAanHoeveelheid(verkoop.getId());
     }
 
