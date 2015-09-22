@@ -12,7 +12,7 @@ public class Verkoop {
     @ManyToOne
     private Product product;
 
-    private int aantal;
+    private double aantal;
 
     public int getId() {
         return id;
@@ -34,11 +34,11 @@ public class Verkoop {
         this.product = product;
     }
 
-    public int getAantal() {
+    public double getAantal() {
         return aantal;
     }
 
-    public void setAantal(int aantal) {
+    public void setAantal(double aantal) {
         this.aantal = aantal;
     }
 }

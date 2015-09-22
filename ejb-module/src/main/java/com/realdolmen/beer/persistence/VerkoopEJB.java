@@ -33,4 +33,11 @@ public class VerkoopEJB {
     public Evenement findEventById(int id) {
         return em.find(Evenement.class, id);
     }
+
+
+    public void addPintjeAanHoeveelheid(int verkoopId)  {
+        Verkoop verkoop = em.find(Verkoop.class, verkoopId);
+        verkoop.setAantal(verkoop.getAantal() + 0.25);
+        em.persist(verkoop);
+    }
 }
