@@ -5,33 +5,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * Created by EWTAX45 on 22/09/2015.
- */
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     private String name;
-    private String password;
+    private String pass;
 
-
-    public User() {
-    }
-
-    public User(String name, String password) {
-        this.name = name;
-        this.password = password;
-    }
-
-    public Integer getId() {
+    public int getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -42,15 +27,19 @@ public class User {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPass() {
+        return pass;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
-    //    public void setPassword(String password) {
-//        this.password = Integer.toString(password.hashCode());
-//    }
+    public User() {
+    }
+
+    public User(String name, String pass) {
+        this.name = name;
+        this.pass = pass;
+    }
 }

@@ -1,5 +1,6 @@
 package com.realdolmen.beer.converter;
 
+import com.realdolmen.beer.domain.Evenement;
 import com.realdolmen.beer.domain.Verkoop;
 import com.realdolmen.beer.persistence.VerkoopEJB;
 
@@ -27,7 +28,7 @@ public class EventConverter implements Converter {
 
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
-        Verkoop verkoop = (Verkoop)value;
-        return String.valueOf(verkoop.getId());
+        Evenement evenement = (Evenement)value;
+        return String.valueOf(evenement.getId());
     }
 }

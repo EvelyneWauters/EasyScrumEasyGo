@@ -11,10 +11,10 @@
     <h1>Evenementen</h1>
     <p:dataTable value="#{eventController.events}" var="event">
         <p:column headerText="Naam">
-            <h:outputText value="#{event}" />
+            <h:outputText value="#{event.name}" />
         </p:column>
         <p:column headerText="Overview">
-            <h:link value="#{event.name}" outcome="/event?id=#{event.id}" />
+            <h:link value="Producten" outcome="event-products?id=#{event.id}" />
         </p:column>
     </p:dataTable>
 </h:body>

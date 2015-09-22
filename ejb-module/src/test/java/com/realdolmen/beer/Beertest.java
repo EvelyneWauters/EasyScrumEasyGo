@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import javax.persistence.PersistenceException;
-import java.util.List;
 
 /**
  * Created by JVDAX31 on 22/09/2015.
