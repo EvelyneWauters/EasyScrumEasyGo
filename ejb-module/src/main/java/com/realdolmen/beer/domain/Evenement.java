@@ -1,9 +1,39 @@
 package com.realdolmen.beer.domain;
 
-/**
- * Created by EWTAX45 on 22/09/2015.
- */
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
 public class Evenement {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @OneToMany
+    private List<Verkoop> verkoopList;
+
+    public int getId() {
+        return id;
+    }
+
+    public Evenement() {
+    }
+
+    public Evenement(List<Verkoop> verkoopList) {
+        this.verkoopList = verkoopList;
+    }
+
+    public void addVerkoop(Verkoop verkoop){
+        verkoopList.add(verkoop);
+    }
+
+    public List<Verkoop> getVerkoopList() {
+        return verkoopList;
+    }
+
+    public void setVerkoopList(List<Verkoop> verkoopList) {
+        this.verkoopList = verkoopList;
+    }
 }
