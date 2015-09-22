@@ -1,5 +1,6 @@
 package com.realdolmen.beer;
 
+import org.h2.engine.Database;
 import org.junit.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
