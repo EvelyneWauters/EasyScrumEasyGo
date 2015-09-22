@@ -17,6 +17,7 @@ public class EventController {
 
     @Inject
     private VerkoopEJB verkoopEJB ;
+    private Evenement evenement;
 
 
     public List<Evenement> getEvents() {
@@ -45,5 +46,13 @@ public class EventController {
         }
 
         return quantity;
+    }
+
+    public void setEvenement(Evenement evenement) {
+        this.evenement = evenement;
+    }
+
+    public Evenement getEvenement() {
+        return evenement;
     }
 }

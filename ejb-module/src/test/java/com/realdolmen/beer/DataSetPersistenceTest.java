@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Loads a DBUnit test set before every unit test.
+ * Zie data.xml onder resources, hier wordt een kleine test-data-set in XML beschreven om in te voeren in de database
  */
 public abstract class DataSetPersistenceTest extends PersistenceTest {
     private static final Logger logger = LoggerFactory.getLogger(DataSetPersistenceTest.class);
