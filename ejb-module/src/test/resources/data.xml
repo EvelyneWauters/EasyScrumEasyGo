@@ -8,9 +8,9 @@
     <evenement id="2" name="Tomorrowland"/>
     <evenement id="3" name="Scoutsfuif 22/09"/>
 
-    <product id="1" name="Stella" inhoud="0.25"/>
-    <product id="2" name="Jupiler" inhoud="0.33"/>
-    <product id="3" name="Leffe Blond" inhoud="0.33"/>
+    <product id="1" name="Stella" inhoud="0.25" imageUrl="https://yt3.ggpht.com/-2VNM9GH_Q1c/AAAAAAAAAAI/AAAAAAAAAAA/I7XxVr_uEwM/s100-c-k-no/photo.jpg"/>
+    <product id="2" name="Jupiler" inhoud="0.33" imageUrl="http://www.liegetourisme.be/images/savourer/brasseries_bistrots_de_terroir/jupiler.jpg"/>
+    <product id="3" name="Leffe Blond" inhoud="0.33" imageUrl="http://www.bier-aanbiedingen.nl/wp-content/themes/Niektheme/logo/Leffe.jpg"/>
 
     <verkoop id="1" aantal="8" product_id="1"/>
     <verkoop id="2" aantal="10" product_id="2"/>

@@ -46,6 +46,22 @@ public class VerkoopEJB {
         em.merge(verkoop);
     }
 
+    public void addGrootPintjeAanHoeveelheid(int verkoopId) {
+        Verkoop verkoop = em.find(Verkoop.class, verkoopId);
+        System.out.println("in hoeveelheid");
+        System.out.println(verkoop.getProduct().getName());
+        verkoop.setAantal(verkoop.getAantal() + 0.33);
+        em.merge(verkoop);
+    }
+
+
+    public void addVatAanHoeveelheid(int verkoopId) {
+        Verkoop verkoop = em.find(Verkoop.class, verkoopId);
+        System.out.println("in hoeveelheid");
+        System.out.println(verkoop.getProduct().getName());
+        verkoop.setAantal(verkoop.getAantal() + 200.0);
+        em.merge(verkoop);
+    }
     public Evenement findEventByID(int id) {
         return em.find(Evenement.class, id);
     }
