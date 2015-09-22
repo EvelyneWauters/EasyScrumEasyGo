@@ -16,6 +16,7 @@ public class Beertest extends DataSetPersistenceTest {
     @Rule
     public ExpectedException expector = ExpectedException.none();
 
+    @Ignore
     @Test
     public void productCanBePersisted() throws Exception {
         Product product = new Product("jupilir vat", 5.0);
@@ -27,7 +28,7 @@ public class Beertest extends DataSetPersistenceTest {
     public void bookCanNotBePersistedWithoutTitle() throws Exception {
 
     }
-
+@Ignore
     @Test
     public void bookCanBeRetrievedById() throws Exception {
         Product product = new Product("jupilir fles", 5.0);

@@ -13,7 +13,7 @@ public class Evenement {
 
     private String name;
 
-    @OneToMany
+    @ManyToMany
     private List<Verkoop> verkoopList;
 
     public int getId() {
