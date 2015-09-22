@@ -11,10 +11,6 @@ public class UserPersistenceTest extends DataSetPersistenceTest {
 
     UserRepository userRepository;
 
-    @Test
-    public void testFindAllUsers()  throws Exception    {
-        assertNotNull(userRepository.getAllUsers());
-    }
 
     @Test
     public void userCanBePersisted() throws Exception {

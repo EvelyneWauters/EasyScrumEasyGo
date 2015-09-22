@@ -50,7 +50,6 @@ public class User {
         this.password = password;
     }
 
-
     //    public void setPassword(String password) {
 //        this.password = Integer.toString(password.hashCode());
 //    }
