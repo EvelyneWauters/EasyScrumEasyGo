@@ -30,6 +30,7 @@ public class VerkoopEJB {
         return em.createQuery("select e from Evenement e", Evenement.class).getResultList();
     }
 
-
-
+    public Evenement findEventById(int id) {
+        return em.find(Evenement.class, id);
+    }
 }
