@@ -23,7 +23,7 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>/index.faces</welcome-file>
+        <welcome-file>/events.faces</welcome-file>
     </welcome-file-list>
 
 </web-app>
