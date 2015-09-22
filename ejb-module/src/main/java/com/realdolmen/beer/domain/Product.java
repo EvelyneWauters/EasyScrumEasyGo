@@ -14,7 +14,10 @@ public class Product {
 
     private String name;
 
-    private String hoeveelheid;
+    private double inhoud;
+
+
+
 
     public int getId() {
         return id;
@@ -28,19 +31,19 @@ public class Product {
         this.name = name;
     }
 
-    public String getHoeveelheid() {
-        return hoeveelheid;
+    public double getInhoud() {
+        return inhoud;
     }
 
-    public void setHoeveelheid(String hoeveelheid) {
-        this.hoeveelheid = hoeveelheid;
+    public void setInhoud(double inhoud) {
+        this.inhoud = inhoud;
     }
 
     public Product() {
     }
 
-    public Product(String name, String hoeveelheid) {
+    public Product(String name, double inhoud) {
         this.name = name;
-        this.hoeveelheid = hoeveelheid;
+        this.inhoud = inhoud;
     }
 }

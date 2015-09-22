@@ -4,6 +4,7 @@ import com.realdolmen.beer.domain.Verkoop;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 /**
  * Created by MDNAX30 on 22/09/2015.
@@ -17,5 +18,9 @@ public class VerkoopEJB {
         verkoop.setAantal(verkoop.getAantal() + hoeveelheid);
         em.persist(verkoop);
     }
+
+//    public List<Verkoop> getAlleVerkoop(){
+//        em.createQuery()
+//    }
 
 }
