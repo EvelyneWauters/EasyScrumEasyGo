@@ -18,29 +18,35 @@ public class VerkoopEJB {
     @PersistenceContext
     EntityManager em;
 
-    public void addQuantity(int hoeveelheid, Verkoop verkoop){
+    public void addQuantity(int hoeveelheid, Verkoop verkoop) {
         verkoop.setAantal(verkoop.getAantal() + hoeveelheid);
         em.persist(verkoop);
     }
 
-    public List<Verkoop> getAlleVerkoop(){
+    public List<Verkoop> getAlleVerkoop() {
         return em.createQuery("select v from Verkoop v", Verkoop.class).getResultList();
     }
 
-    public List<Evenement> getAllEvents(){
+    public List<Evenement> getAllEvents() {
         return em.createQuery("select e from Evenement e", Evenement.class).getResultList();
     }
 
-    public void addUser(String name, String pass){
+    public void addUser(String name, String pass) {
         User usr = new User(name, pass);
         em.persist(usr);
         em.flush();
     }
 
 
-    public void addPintjeAanHoeveelheid(int verkoopId)  {
+    public void addPintjeAanHoeveelheid(int verkoopId) {
         Verkoop verkoop = em.find(Verkoop.class, verkoopId);
         verkoop.setAantal(verkoop.getAantal() + 0.25);
         em.persist(verkoop);
     }
+
+    public Evenement findEventByID(int id) {
+        return em.find(Evenement.class, id);
+    }
+
+
 }
