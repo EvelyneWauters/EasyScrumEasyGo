@@ -1,5 +1,6 @@
 package com.realdolmen.beer.persistence;
 
+import com.realdolmen.beer.domain.Evenement;
 import com.realdolmen.beer.domain.Verkoop;
 
 import javax.persistence.EntityManager;
@@ -19,8 +20,14 @@ public class VerkoopEJB {
         em.persist(verkoop);
     }
 
-//    public List<Verkoop> getAlleVerkoop(){
-//        em.createQuery()
-//    }
+    public List<Verkoop> getAlleVerkoop(){
+        return em.createQuery("select v from Verkoop v", Verkoop.class).getResultList();
+    }
+
+    public List<Evenement> getAllEvents(){
+        return em.createQuery("select e from Evenement e", Evenement.class).getResultList();
+    }
+
+
 
 }
