@@ -11,6 +11,8 @@ public class Evenement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    private String name;
+
     @OneToMany
     private List<Verkoop> verkoopList;
 
