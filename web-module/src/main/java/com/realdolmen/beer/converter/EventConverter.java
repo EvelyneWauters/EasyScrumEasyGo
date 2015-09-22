@@ -23,7 +23,7 @@ public class EventConverter implements Converter {
             return null;
 
         int id = Integer.parseInt(value);
-        return verkoopEJB.findEventById(id);
+        return verkoopEJB.findEventByID(id);
     }
 
     @Override
