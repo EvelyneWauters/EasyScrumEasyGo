@@ -1,6 +1,7 @@
 package com.realdolmen.beer.persistence;
 
 import com.realdolmen.beer.domain.Evenement;
+import com.realdolmen.beer.domain.User;
 import com.realdolmen.beer.domain.Verkoop;
 
 import javax.ejb.Stateless;
@@ -30,7 +31,12 @@ public class VerkoopEJB {
         return em.createQuery("select e from Evenement e", Evenement.class).getResultList();
     }
 
-    public Evenement findEventById(int id) {
-        return em.find(Evenement.class, id);
+    public void addUser(String name, String pass){
+        User usr = new User(name, pass);
+        em.persist(usr);
+        em.flush();
     }
+
+
+
 }

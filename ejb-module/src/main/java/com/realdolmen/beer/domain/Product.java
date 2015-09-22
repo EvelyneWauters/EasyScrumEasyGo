@@ -14,6 +14,7 @@ public class Product {
 
     private String name;
 
+    // in liters
     private double inhoud;
 
 
