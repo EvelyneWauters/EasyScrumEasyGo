@@ -55,11 +55,16 @@ public class VerkoopEJB {
     // out: lijst_v_producten
     public List<Product> getListOfProductsByEventId(int id){
         ArrayList<Product> list = new ArrayList<Product>();
+
         Evenement e = findEventByID(id);
+
         for (Verkoop v : e.getVerkoopList()){
             list.add(v.getProduct());
         }
         return list;
+
+
+
     }
 
 }
